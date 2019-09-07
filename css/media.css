@@ -1,0 +1,43 @@
+@media (min-width: 576px) {
+  .box {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .box {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .box {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .bg ~ .box {
+    width: 1140px;
+  }
+}
+@media (max-width: 575px){
+	.box {
+	   width:95%;
+     padding: 40px 20px;
+	}
+}
+@media(max-width: 375px){
+  .box li ol{
+    margin-left: 12px;
+  }
+}
+@media(max-width: 360px){
+  .box {
+     width:95%;
+     padding: 40px 6px;
+  }
+  .box .captcha{
+    margin-left: -6px;
+  }
+}

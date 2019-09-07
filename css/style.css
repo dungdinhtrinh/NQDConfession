@@ -1,0 +1,235 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #29a8df;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #29A8DF;
+}
+
+body{
+	overflow-x: hidden;
+	background-color: #eee;
+	position: relative;
+	z-index: 0;
+}
+
+.banner{
+	height: 184px;
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 65%, rgba(0, 0, 0, 0.4) 100%), url(https://i.imgur.com/MPIGiZv.png);
+    background-size: cover;
+    background-position: center;
+    color: rgba(255, 255, 255, 1);
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: all .2s;
+}
+
+.box{
+	width: 850px;
+	background: rgba(255,255,255,1);
+	padding: 40px 80px;
+	position: absolute;
+	z-index: 2;
+	top: 94px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.box h1{
+	margin-bottom: 20px;
+}
+.box p,.box b{
+	margin-bottom: 1rem;
+}
+.box ol{
+	margin-left: 15px;
+	margin-bottom: 1rem;
+}
+
+.box li ol{
+	margin-left: 30px;
+}
+.box li ol li{
+	margin-bottom: 5px;
+}
+
+.box .head-cfs{
+	font-weight: bold;
+	font-family: 'Montserrat';
+}
+.box textarea{
+	width:100%;
+	margin-bottom: 10px;
+	box-sizing:border-box;
+	display:block;
+	max-width:100%;
+	line-height:1.5;
+	padding:15px 15px 30px;
+	border-radius:3px;
+	border:1px solid #F7E98D;
+	font-family: 'Roboto Slab', sans-serif;
+	font-size: 16px;
+	outline: none;
+	transition:box-shadow 0.5s ease;
+	box-shadow:0 4px 6px rgba(0,0,0,0.1);
+	font-smoothing:subpixel-antialiased;
+	background:linear-gradient(#F9EFAF, #F7E98D);
+	background:-o-linear-gradient(#F9EFAF, #F7E98D);
+	background:-ms-linear-gradient(#F9EFAF, #F7E98D);
+	background:-moz-linear-gradient(#F9EFAF, #F7E98D);
+	background:-webkit-linear-gradient(#F9EFAF, #F7E98D);
+}
+
+.box .notif-captcha{
+	font-size: 14px;
+	margin-top: 15px; 
+	display: block;
+	color: #204A87FF;
+}
+
+.box button{
+	margin-top: 30px;
+	padding: 7px 22px;
+	border: none;
+	background: #007bff;
+	color: white;
+	font-family: 'Roboto Slab',sans-serif;
+	font-size: 18px;
+	border-radius: 5px;
+	outline: none;
+	cursor: pointer;
+	transition: all .2s;
+}
+.box button:hover{
+	box-shadow: 1px 1px 3px 2px #17a2b8;
+}
+
+.box .captcha{
+	margin-top: 5px;
+}
+.error-submit{
+	margin-bottom: 0!important;
+	font-size: 13px;
+	font-style: italic;
+	color: red;
+
+}
+
+.loading{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,0.8);
+	top: 0;
+	left: 0;
+	z-index: 9;
+}
+
+.loading .box-loading{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 10;
+}
+
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 64px;
+  height: 64px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 32px 32px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -3px 0 0 -3px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 50px;
+  left: 50px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 54px;
+  left: 45px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 57px;
+  left: 39px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 58px;
+  left: 32px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 57px;
+  left: 25px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 54px;
+  left: 19px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 50px;
+  left: 14px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 45px;
+  left: 10px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
